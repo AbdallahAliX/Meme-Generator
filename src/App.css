@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Karla;
+  margin: 0;
+}
+
+.body-container{
+  padding: 3rem 2.5rem;
+  font-family: karla;
+}
+
+.header{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-image: linear-gradient(to right ,rgba(103, 34, 128, 1) ,rgba(166, 38, 211, 1));
+  color: white;
+  padding: 1rem;
+  font-family: karla;
+}
+
+.logo{
+  width: 2.6rem;
+  margin-right: 0.7rem;        
+}
+
+.title{
+  margin-right: auto;
+  font-size: 1.35rem;
+  font-weight: 500;
+  letter-spacing: -0.05rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.project{
+  font-size: .85rem;
+  font-weight: 500;
+}
+
+
+.input-layout{
+  display: flex;
+  justify-content: space-between;
+}
+.meme-input{
+  width: 55rem;
+  margin-bottom: 1rem;
+  height: 2.2rem;
+  border-radius: 0.35rem;
+  border-style: solid;
+  border-width: 0.1rem;
+  border-color: rgba(213, 212, 216, 1);
+  padding-left: 1rem;
+  font-family: karla;
+}
+
+
+
+.meme-input::placeholder{
+  color: rgb(163, 162, 165);
+  font-family: karla;
+}
+
+.meme-input:focus{
+  border-color: rgba(166, 38, 211, 1);
+  outline: none;
+}
+
+.image-generator{
+  width: 100%;
+  height: 2.2rem;
+  border-radius: 0.35rem;
+  border: none;
+  background: linear-gradient(to right ,rgba(103, 34, 128, 1) ,rgba(166, 38, 211, 1));
+  color: white;
+  font-weight: 700;
+  font-family: karla;
+  cursor: pointer;
+}
+
+
+
