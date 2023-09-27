@@ -1,5 +1,4 @@
 import React from "react"
-import memesData from "./memesData"
 
 
 
@@ -11,7 +10,7 @@ export default function MemeForm() {
         topText:"",
         bottomText:""
     })
-
+    const [allMemes,setAllMemes] = React.useState([])
     function handleChange(event){
         const {name,value} = event.target
         setMemeText(prevMemeText => ({
@@ -20,10 +19,15 @@ export default function MemeForm() {
         }))
     }
 
+    React.useEffect(()=>{
+        fetch("https://api.imgflip.com/get_memes")
+            .then(res => res.json())
+            .then(data => setAllMemes(data.data.memes))
+    },[])
+
     function randomMemeImage(){
-    const memesArray = memesData.data.memes;
-    const randomImage = Math.floor(Math.random() * memesArray.length)
-    setMemeImage(memesArray[randomImage].url)
+    const randomImage = Math.floor(Math.random() * allMemes.length)
+    setMemeImage(allMemes[randomImage].url)
     }
 
     return(
